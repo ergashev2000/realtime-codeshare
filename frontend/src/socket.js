@@ -7,5 +7,5 @@ export const initSocket = async () => {
         timeout: 10000,
         transports: ['websocket'],
     };
-    return io("https://realtime-codeshare.onrender.com", options);
+    return io(import.meta.env.VITE_APP_BACKEND_URL, options);
 };
